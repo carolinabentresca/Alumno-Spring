@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Edit</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>   
+    </head>
+    <body>
+        <div class="container mt-4 col-lg-4">
+            <div class="card border-dark"> 
+                <div class="card-body bg-dark text-white">
+                    <br/>  
+                    <form action="#" th:action="@{/save}" th:object="${alumno}" method="post"> 
+                        <label for="id">Código</label>
+                        <input type="text" class="form-control" id="id" th:field="*{id}" name="id">                       
+                        <label for="nombre">Nombre</label>
+                        <input type="text" class="form-control" id="nombre" th:field="*{nombre}" name="nombre">
+                        <label for="apellido">Apellido</label>
+                        <input type="text" class="form-control" id="apellido" th:field="*{apellido}" name="apellido">
+                        <label for="edad">Edad</label>
+                        <input type="text" class="form-control" id="edad" th:field="*{edad}" name="edad">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control" id="email" th:field="*{email}" name="email">
+                        <label for="materia">Materia Favorita</label>
+                        <input type="text" class="form-control" id="materia" th:field="*{materia}" name="materia">
+                        <br/> 
+                        <button type="submit" class="btn btn-success">Editar</button>
+                    </form> 
+                </div>
+            </div>     
+        </div>
+    </body>
+</html>
